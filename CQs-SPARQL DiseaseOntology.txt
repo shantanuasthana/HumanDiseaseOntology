@@ -1,0 +1,187 @@
+CQ1.Swaroop is showing symptoms of common cold, what possible medications can he take to subdue them?
+
+PREFIX dis:<http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#>
+SELECT distinct ?symptom ?medication
+WHERE
+{
+?name a dis:Disease.
+?name dis:hasDiseaseName "common cold"^^xsd:string.
+?name dis:hasSymptom ?symptom.
+?symptom dis:takeRemedy ?medication.
+}
+
+
+CQ2.Jitendra has abdominal pain, vomit and rashes on the skin. What may be the possible diseases?
+
+PREFIX dis:<http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#>
+SELECT distinct ?name ?symptom
+WHERE
+{
+?name a dis:Disease.
+?name dis:hasSymptom ?symptom.
+?symptom dis:hasSymptomName ?symname.
+FILTER(?symname = "rashes"^^xsd:string || ?symname = "abdominal pain"^^xsd:string || ?symname = "vomit"^^xsd:string).
+}
+
+
+CQ3.(USES REASONING) Vamsi is having rashes, find a specialty hospital for him?
+
+PREFIX dis:<http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#>
+SELECT distinct ?hospital ?speciality
+WHERE
+{
+?symptom a dis:Symptom.
+?symptom dis:hasSymptomName "rashes"^^xsd:string.
+?symptom dis:associatedMedicalSpeciality ?s1.
+?hospital a dis:SpecialityHospital.
+?hospital dis:hasMedicalSpeciality ?speciality.
+FILTER(?s1 = ?speciality).
+
+}
+
+CQ4. James forgot the prescription given by the doctor for COVID-19, what possible prescription can the system give him?
+
+PREFIX dis:<http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#>
+SELECT  ?name  ?prescription ?treatment ?prescriptionDetails
+WHERE
+{
+?name dis:hasDiseaseName "covid-19"^^xsd:string.
+?name dis:hasPrescription ?prescription.
+?prescription dis:hasTreatment ?treatment. 
+?prescription dis:hasPrescriptionDetails ?prescriptionDetails.
+}
+
+CQ5. Sahapawn is experiencing cephalalgia which specialty should she go to and what remedies can she take?
+
+PREFIX dis:<http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#>
+SELECT distinct ?symptom ?speciality ?remedy
+WHERE
+{{
+?symptom a dis:Symptom.
+?symptom dis:hasSymptomName "cephalalgia"^^xsd:string.
+?symptom dis:associatedMedicalSpeciality ?speciality.
+}
+UNION
+{
+?symptom dis:hasSymptomName "cephalalgia"^^xsd:string.
+?symptom dis:takeRemedy ?remedy.
+}
+}
+
+CQ6. Adnan just witnessed an accident and wants to find out hospitals that offer emergency trauma care in the city.
+
+PREFIX dis:<http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#>
+SELECT  distinct ?hospital ?speciality ?treatment
+WHERE
+{
+?hospital a dis:Hospital.
+?hospital dis:hasMedicalSpeciality ?speciality.
+?speciality dis:hasSpecialityName "traumatology-orthopedy"^^xsd:string.
+?speciality dis:offerService ?treatment.
+}
+
+
+CQ7.  Alex’s grandmother is in stage 1 lung cancer. He wants to know how long are the duration and frequency and what are the treatments for lung cancer and which hospital offers those treatments?
+
+PREFIX dis:<http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#>
+SELECT  distinct ?name ?treatment ?details
+{
+?name a dis:Disease.
+?name dis:hasDiseaseName "lung cancer"^^xsd:string.
+?name dis:associatedMedicalSpeciality ?s1.
+?hospital a dis:Hospital.
+?hospital dis:hasMedicalSpeciality ?s2.
+FILTER(?s1=?s2)
+?name dis:hasPrescription ?prescription.
+?prescription dis:hasTreatment ?treatment.
+?prescription dis:hasPrescriptionDetails ?details
+}
+
+CQ8. Shantanu went back to India from Thailand during the pandemic and now is worried about getting COVID-19. He wants to know the possible symptoms for COVID-19 and where he can get his covid-19 test done.  
+
+PREFIX dis:<http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#>
+SELECT  distinct  ?symptoms ?hospital ?test
+{{
+?name a dis:Disease.
+?name dis:hasDiseaseName "covid-19"^^xsd:string.
+?name dis:hasSymptom ?symptoms.}
+UNION{
+?hospital a dis:Hospital.
+?hospital dis:offerService ?test.
+?test dis:hasServiceName "covid-19 test"^^xsd:string.}
+}
+
+CQ9.(USES REASONING) Su slipped on the wet floor and fractured her arm, where should she go and what possible treatment can she get?
+
+PREFIX dis:<http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#>
+SELECT  distinct ?name ?speciality ?hospital
+WHERE
+{
+?name a dis:Disease.
+?name dis:hasDiseaseName "fracture"^^xsd:string.
+?name dis:associatedMedicalSpeciality ?speciality.
+?hospital a dis:SpecialityHospital.
+?hospital dis:hasMedicalSpeciality ?s2.
+FILTER(?s2 = ?speciality)
+}
+
+CQ10.(USES REASONING) What vaccine should be given for the prevention of Hepatitis B and what is the dosage amount and where is it injected?
+
+PREFIX dis:<http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#>
+SELECT  distinct ?name ?prescription  ?vaccine ?dosage ?givenAt ?details
+WHERE
+{
+?name a dis:VaccinableDiseases.
+?name dis:hasDiseaseName "hepatitis B"^^xsd:string.
+?name dis:hasPrescription ?prescription.
+?prescription dis:hasTreatment ?vaccine.
+?vaccine dis:quantityPerTake ?dosage.
+?vaccine dis:isInjectedIn ?givenAt.
+?prescription dis:hasPrescriptionDetails ?details.
+}
+
+
+CQs using Reasoner
+
+CQ: Get the list of all the vaccines to be given to children after birth along with their dosage and details.
+
+PREFIX dis:<http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#>
+SELECT  distinct ?name ?vaccine  ?details ?dosage ?location
+WHERE
+{
+?name a dis:VaccinableDiseases.
+?name dis:hasVaccine ?vaccine.
+?name dis:hasPrescription ?prescription.
+?prescription dis:hasPrescriptionDetails ?details.
+?vaccine dis:quantityPerTake ?dosage.
+?vaccine dis:isInjectedIn ?location.
+}
+
+
+CQ: The daily health magazine wants to know the hospital that handles serious diseases along with the speciality associated with the disease 
+and what prescriptions are given for these diseases.
+
+PREFIX dis:<http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#>
+SELECT distinct ?hospital ?disease ?speciality ?prescription
+WHERE
+{
+?disease a dis:SeriousDisease.
+?disease dis:hasPrescription ?prescription.
+?disease dis:associatedMedicalSpeciality ?speciality.
+?hospital a dis:SpecialityHospital.
+?hospital dis:hasMedicalSpeciality ?s
+FILTER(?speciality = ?s)
+}
+
+
+CQ: What head and neck disease have the symptoms cephalalgia and fever?
+
+PREFIX dis:<http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#>
+SELECT ?disease ?symptom
+WHERE
+{
+?disease a dis:HeadAndNeckDisease.
+?disease dis:hasSymptom ?symptom.
+?symptom dis:hasSymptomName ?symname.
+FILTER(?symname = "cephalalgia"^^xsd:string || ?symname = "fever"^^xsd:string).
+}

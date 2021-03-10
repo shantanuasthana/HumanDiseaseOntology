@@ -1,0 +1,2728 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#"
+     xml:base="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:disease="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#associatedMedicalSpeciality -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#associatedMedicalSpeciality">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#dealsWithOrgan"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Health"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#dealsWithOrgan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#dealsWithOrgan">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasMedicalSpeciality -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasMedicalSpeciality">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hospital"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasPrescription -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasPrescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasSymptom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasSymptom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasTreatment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasTreatment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Dimension"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasVaccine -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasVaccine">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#VaccinableDiseases"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Vaccination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#isInjectedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#isInjectedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Vaccination"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Health"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#offerService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#offerService">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hospital"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#quantityPerTake -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#quantityPerTake">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Mass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#takeRemedy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#takeRemedy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#treatmentDuration -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#treatmentDuration">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Duration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#treatmentFrequency -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#treatmentFrequency">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Frequency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasDiseaseName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasDiseaseName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasOrganName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasOrganName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasPrescriptionDetails -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasPrescriptionDetails">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasServiceName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasServiceName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasSpecialityName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasSpecialityName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hospital"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasSymptomName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasSymptomName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#numericalValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#numericalValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Dimension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalDisease">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Amoxilicin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Amoxilicin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#BackDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#BackDisease">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#BackOrgan"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#BackOrgan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#BackOrgan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#BackOrgan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#BacterialInfection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#BacterialInfection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#InfectiousDisease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ChestDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ChestDisease">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ChestOrgan"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ChestOrgan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ChestOrgan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ChestOrgan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Cyclosporine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Cyclosporine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Dimension -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Dimension">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#numericalValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Health"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#associatedMedicalSpeciality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByMechanism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByMechanism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Duration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Duration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Dimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TimeUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Frequency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Frequency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Dimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TimeUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckDisease">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Health -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Health"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hospital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hospital"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hydrochloroquine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hydrochloroquine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#InfectiousDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#InfectiousDisease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#InflammatoryDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#InflammatoryDisease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Mass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Mass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Dimension"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasUnit"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MassUnit"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MassUnit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MassUnit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#quantityPerTake"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Mass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonLocalizedDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonLocalizedDisease">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonLocalizedOrgan"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonLocalizedOrgan"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonLocalizedOrgan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonLocalizedOrgan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Paracetamol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Paracetamol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#PelvicDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#PelvicDisease">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#PelvicOrgan"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#location"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#PelvicOrgan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#PelvicOrgan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#PelvicOrgan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasTreatment"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#PrescriptionSurgery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#PrescriptionSurgery">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Surgery"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#SeriousDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#SeriousDisease">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasPrescription"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#PrescriptionSurgery"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#SpecialityHospital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#SpecialityHospital">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hospital"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasMedicalSpeciality"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Surgery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Surgery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Health"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TimeUnit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TimeUnit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TumorDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TumorDisease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Unit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#VaccinableDiseases -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#VaccinableDiseases">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hasVaccine"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Vaccination"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Vaccination -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Vaccination">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#VirusInfection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#VirusInfection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#InfectiousDisease"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Apollo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Apollo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hospital"/>
+        <hasMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gastrology"/>
+        <hasMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#infectious_disease_care"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#City_Hospital -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#City_Hospital">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hospital"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Fortis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Fortis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hospital"/>
+        <hasMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#neurology"/>
+        <hasMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#traumatology-orthopedy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hepatitis_B_vaccine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hepatitis_B_vaccine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Vaccination"/>
+        <isInjectedIn rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#thigh"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_500_mg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Measles_vaccine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Measles_vaccine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Vaccination"/>
+        <isInjectedIn rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#upper_arm"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_500_mg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medanta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medanta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hospital"/>
+        <hasMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cardiology"/>
+        <hasMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gynecology-obstetric"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gynecology-obstetric</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Mediquest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Mediquest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hospital"/>
+        <hasMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pathology"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#blood_test"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#covid-19_test"/>
+        <hasServiceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">covid-19 test</hasServiceName>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#OPV_Booster -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#OPV_Booster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Vaccination"/>
+        <isInjectedIn rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#oral"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_200_mg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ORS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ORS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+        <treatmentDuration rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_day"/>
+        <treatmentFrequency rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_day"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Polio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Polio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#VirusInfection"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_OPV_Booster"/>
+        <hasVaccine rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#OPV_Booster"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#skeleton"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polio</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TT_Booster -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TT_Booster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Vaccination"/>
+        <isInjectedIn rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#upper_arm"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_500_mg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Tata_Memorial_Cancer_Hospital -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Tata_Memorial_Cancer_Hospital">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hospital"/>
+        <hasMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cancer-care"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer care</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Venus_skin_clinic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Venus_skin_clinic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hospital"/>
+        <hasMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#dermatology"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dermatology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#abdominal_pain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#abdominal_pain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gastrology"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdominal pain</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#adrenal_glands -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#adrenal_glands">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adrenal glands</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#amoxilicine_2g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#amoxilicine_2g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Amoxilicin"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_2_g"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#anesthesiology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#anesthesiology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anesthesiology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#anorexia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#anorexia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anorexia</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#appendicitis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#appendicitis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#InflammatoryDisease"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gastrology"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#surgery"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_paracetamol_1"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_surgery"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#abdominal_pain"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#anorexia"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vomit"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#colon"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">appendicitis</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#arrhythmia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#arrhythmia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">irregular heartbeat</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#aspirin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#aspirin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_200_mg"/>
+        <treatmentDuration rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_day"/>
+        <treatmentFrequency rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_2_times_per_day"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#benadryl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#benadryl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_200_mg"/>
+        <treatmentDuration rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_day"/>
+        <treatmentFrequency rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_day"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#bladder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#bladder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#PelvicOrgan"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bladder</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#bladder_cancer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#bladder_cancer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TumorDisease"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cancer-care"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#urology-nephrology"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_chemotherapy"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_radiotherapy"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_surgery"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hematuria"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#bladder"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bladder cancer</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#blood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#blood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonLocalizedOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#blood_test -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#blood_test">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment"/>
+        <hasServiceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood test</hasServiceName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#brain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#brain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brain</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#bypass_surgery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#bypass_surgery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Surgery"/>
+        <hasServiceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bypass surgery</hasServiceName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cancer-care -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cancer-care">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#chemotherapy"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#radiation_therapy"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#surgery"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer care</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cardiology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cardiology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#heart"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#bypass_surgery"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#coronary_angioplasty"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cephalalgia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cephalalgia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#neurology"/>
+        <takeRemedy rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#aspirin"/>
+        <takeRemedy rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#paracetamol_500"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cephalalgia</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#chemotherapy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#chemotherapy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#chest_pain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#chest_pain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chest pain</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#colon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#colon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colon</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#common_cold -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#common_cold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cough"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#fever"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#headache"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#runny_nose"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tiredness"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#nose"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common cold</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#coronary_angioplasty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#coronary_angioplasty">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Surgery"/>
+        <hasServiceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coronary angioplasty</hasServiceName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cough -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cough">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <takeRemedy rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#benadryl"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cough</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#covid-19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#covid-19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#InfectiousDisease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#VirusInfection"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#infectious_disease_care"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pneumology-allergology"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_covid-19_test"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_hydrochloroquine_1"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_isolation"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_plasma_therapy"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cough"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#fever"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#sore_throat"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tiredness"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#larynx"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#lungs"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pharynx"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">covid-19</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#covid-19_test -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#covid-19_test">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment"/>
+        <hasServiceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">covid-19 test</hasServiceName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cyclosporine_200mg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cyclosporine_200mg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Cyclosporine"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_200_mg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#day -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#day">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#dentistry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#dentistry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#teeth"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tongue"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dentistry</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#dermatology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#dermatology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#scalp"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#skin"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dermatology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#diaphragm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#diaphragm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ChestOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diaphragm</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#diarrhoea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#diarrhoea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#InflammatoryDisease"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#abdominal_pain"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#indigestion"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#watery_stools"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#small_intestine"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#stomach"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diarrhoea</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_day -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_day">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Duration"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#day"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_month -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_month">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Duration"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#month"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_week -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_week">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Duration"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#week"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_year -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_year">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Duration"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#year"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_3_days -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_3_days">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Duration"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#day"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ears -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ears">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ears</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#endocrinology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#endocrinology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#parathyroid_glands"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#thyroid_gland"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">endocrinology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#esophagus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#esophagus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ChestOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">esophagus</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#eye -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#eye">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eye</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#fever -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#fever">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <takeRemedy rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#take_a_lot_of_fluids"/>
+        <takeRemedy rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tylenol"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fever</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#fracture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#fracture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#traumatology-orthopedy"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_plaster"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#skeleton"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fracture</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_day -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_day">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Frequency"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#day"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_month -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_month">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Frequency"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#month"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_week -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_week">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Frequency"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#week"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_year -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_year">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Frequency"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#year"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_2_times_per_day -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_2_times_per_day">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Frequency"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#day"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gall_bladder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gall_bladder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gall bladder</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gastrology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gastrology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#colon"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#esophagus"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gall_bladder"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#liver"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pancreas"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#peritoneum"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#rectumm"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#small_intestine"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#stomach"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gastrology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#genetic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#genetic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genetic</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Mass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gynecology-obstetric -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gynecology-obstetric">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gynecology-obstetric</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#headache -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#headache">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <takeRemedy rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#aspirin"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">headache</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#heart -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#heart">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ChestOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#heart_attack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#heart_attack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cardiology"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_angioplasty"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_bypass_surgery"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#arrhythmia"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#chest_pain"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tiredness"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#heart"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart attack</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hematuria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hematuria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hematuria</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hemoptysis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hemoptysis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hemoptysis</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hepatitisB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hepatitisB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#VirusInfection"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_hepatitis_B_vaccine"/>
+        <hasVaccine rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hepatitis_B_vaccine"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#liver"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hepatitis B</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hydrocholoroquine_200mg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hydrocholoroquine_200mg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hydrochloroquine"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_200_mg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#immunology-hmatology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#immunology-hmatology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#blood"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#spleen"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#thymus"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vertebrae"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#plasma_therapy"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immunology-hematology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#indigestion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#indigestion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <takeRemedy rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ORS"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">indigestion</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#infectious_disease_care -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#infectious_disease_care">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#isolation"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infectious disease care</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#isolation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#isolation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment"/>
+        <hasServiceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isolation</hasServiceName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#kidneys -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#kidneys">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidneys</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#kilogram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#kilogram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MassUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#larynx -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#larynx">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">larynx</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#liver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#liver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#lung_cancer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#lung_cancer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TumorDisease"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cancer-care"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pneumology-allergology"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_chemotherapy"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_radiotherapy"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_surgery"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#anorexia"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#chest_pain"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cough"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hemoptysis"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#sibiliant_rhonchi"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#lungs"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung cancer</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#lungs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#lungs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ChestOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lungs</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#malaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#malaria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#BacterialInfection"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#immunology-hmatology"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_blood_test"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_vibramycin"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#fever"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#headache"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#sweating"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tiredness"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vomit"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malaria</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mammary_glands -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mammary_glands">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ChestOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mammary glands</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_1_g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_1_g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Mass"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gram"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_200_mg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_200_mg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Mass"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#milligram"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_2_g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_2_g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Mass"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gram"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_500_mg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_500_mg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Mass"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#milligram"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#measles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#measles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#VirusInfection"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_measles_vaccine"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cough"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#fever"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#rashes"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#runny_nose"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#sore_throat"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tiredness"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#watery_stools"/>
+        <hasVaccine rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Measles_vaccine"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#skin"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">measles</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#meninges -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#meninges">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meninges</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#milligram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#milligram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MassUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#month -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#month">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mumps -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mumps">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#InfectiousDisease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#VirusInfection"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#infectious_disease_care"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#otolaryngology-stomatology"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_paracetamol_2"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cephalalgia"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#fever"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ears"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mumps</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#myelodysplastic_syndrome -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#myelodysplastic_syndrome">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#immunology-hmatology"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_cycloporine_1"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#short_breath"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#spinal_cord"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">myelodysplastic synndrome</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#neurology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#neurology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#brain"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#spinal_cord"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neurology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#nose -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#nose">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nose</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#opthalmology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#opthalmology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#eye"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">opthalmology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#oral -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#oral">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#otolaryngology-stomatology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#otolaryngology-stomatology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ears"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#larynx"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pharynx"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#salivary_glands"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">otolaryngology-stomatology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pancreas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pancreas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pancreas</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#paracetamol_1000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#paracetamol_1000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Paracetamol"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_1_g"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#paracetamol_500 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#paracetamol_500">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Paracetamol"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_500_mg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#parathyroid_glands -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#parathyroid_glands">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parathyroid glands</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pathology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pathology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#blood_test"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#covid-19_test"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pediatrics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pediatrics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vaccines"/>
+        <hasServiceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vaccine</hasServiceName>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pediatrics</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#peritoneum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#peritoneum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peritoneum</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pharynx -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pharynx">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pharynx</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#plasma_therapy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#plasma_therapy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment"/>
+        <hasServiceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plasma therapy</hasServiceName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#plaster -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#plaster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+        <hasServiceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plaster</hasServiceName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pneumology-allergology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#pneumology-allergology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#lungs"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pneumology-allergology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_OPV_Booster -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_OPV_Booster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#OPV_Booster"/>
+        <hasPrescriptionDetails rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1. At birth or as early as possible within the first 15 days 
+2.  At 6 weeks, 10 weeks &amp; 14 weeks 
+3. 16-24 months age</hasPrescriptionDetails>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_TT_booster -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_TT_booster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TT_Booster"/>
+        <hasPrescriptionDetails rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Given at the age 10 and 16</hasPrescriptionDetails>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_amoxilicine_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_amoxilicine_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#amoxilicine_2g"/>
+        <treatmentDuration rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_week"/>
+        <treatmentFrequency rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_day"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_angioplasty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_angioplasty">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#coronary_angioplasty"/>
+        <hasPrescriptionDetails rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coronary angioplasty for opening the blocked artery</hasPrescriptionDetails>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_blood_test -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_blood_test">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#blood_test"/>
+        <hasPrescriptionDetails rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood test to get the RBC, WBC, platlets count</hasPrescriptionDetails>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_bypass_surgery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_bypass_surgery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#bypass_surgery"/>
+        <hasPrescriptionDetails rdf:datatype="http://www.w3.org/2001/XMLSchema#string">surgery to bypass the affected blood vessel with a healthy artery</hasPrescriptionDetails>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_chemotherapy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_chemotherapy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#chemotherapy"/>
+        <hasPrescriptionDetails rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemotherapy for 1 month every week</hasPrescriptionDetails>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_covid-19_test -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_covid-19_test">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#covid-19_test"/>
+        <hasPrescriptionDetails rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing symptoms of covid-19 using fast testing kit</hasPrescriptionDetails>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_cycloporine_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_cycloporine_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#cyclosporine_200mg"/>
+        <treatmentDuration rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_year"/>
+        <treatmentFrequency rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_day"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_hepatitis_B_vaccine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_hepatitis_B_vaccine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Hepatitis_B_vaccine"/>
+        <hasPrescriptionDetails rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hepatitis B vaccine is given once at the birth</hasPrescriptionDetails>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_hydrochloroquine_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_hydrochloroquine_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#hydrocholoroquine_200mg"/>
+        <treatmentDuration rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_month"/>
+        <treatmentFrequency rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_2_times_per_day"/>
+        <hasPrescriptionDetails rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydrochloroquine 200 mg
+take 2 times a day for 1 month</hasPrescriptionDetails>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_isolation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_isolation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#isolation"/>
+        <treatmentDuration rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_month"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_measles_vaccine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_measles_vaccine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Measles_vaccine"/>
+        <hasPrescriptionDetails rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1. 9 completed months-12 months. (give up to 5 years if not received at 9-12 months age) 
+2. 16-24 Months</hasPrescriptionDetails>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_paracetamol_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_paracetamol_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#paracetamol_1000"/>
+        <treatmentDuration rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_week"/>
+        <treatmentFrequency rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_day"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_paracetamol_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_paracetamol_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#paracetamol_500"/>
+        <treatmentDuration rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_week"/>
+        <treatmentFrequency rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_day"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_plasma_therapy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_plasma_therapy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#plasma_therapy"/>
+        <hasPrescriptionDetails rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plasma transfusion from the cured patient</hasPrescriptionDetails>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_plaster -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_plaster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#plaster"/>
+        <treatmentDuration rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_month"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_radiotherapy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_radiotherapy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#radiation_therapy"/>
+        <hasPrescriptionDetails rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation therapy for 1 month every 2 weeks</hasPrescriptionDetails>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_surgery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_surgery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#surgery"/>
+        <hasPrescriptionDetails rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operation is performed to remove tumor in lungs</hasPrescriptionDetails>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_vibramycin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_vibramycin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Prescription"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vibramycin"/>
+        <treatmentDuration rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_week"/>
+        <treatmentFrequency rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_2_times_per_day"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#psychiatry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#psychiatry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">psychiatry</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#radiation_therapy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#radiation_therapy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment"/>
+        <hasServiceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation therapy</hasServiceName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#rashes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#rashes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#dermatology"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rashes</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#rectumm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#rectumm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#PelvicOrgan"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rectumm</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#rheumatology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#rheumatology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rheumatology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#runny_nose -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#runny_nose">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <takeRemedy rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vicks_vaporub"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">runny nose</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#salivary_glands -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#salivary_glands">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">salivary glands</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#scalp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#scalp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scalp</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#scarlet_fever -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#scarlet_fever">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#BacterialInfection"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#InfectiousDisease"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#infectious_disease_care"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_amoxilicine_1"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#abdominal_pain"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#fever"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#rashes"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vomit"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#skin"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scarlet fever</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#short_breath -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#short_breath">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">short breath</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#sibiliant_rhonchi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#sibiliant_rhonchi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sibiliant rhonchi</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#skeleton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#skeleton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonLocalizedOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skeleton</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#skin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#skin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonLocalizedOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skin</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#small_intestine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#small_intestine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">small intestine</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#sore_throat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#sore_throat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sore throat</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#spinal_cord -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#spinal_cord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#BackOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spinal cord</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#spleen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#spleen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spleen</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#stomach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#stomach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stomach</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#surgery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#surgery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Surgery"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#bypass_surgery"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#coronary_angioplasty"/>
+        <hasServiceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">surgery</hasServiceName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#sweating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#sweating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sweating</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#take_a_lot_of_fluids -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#take_a_lot_of_fluids">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonMedicatedTreatment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#teeth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#teeth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">teeth</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tetanus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tetanus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#DiseaseByLocation"/>
+        <associatedMedicalSpeciality rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#rheumatology"/>
+        <hasPrescription rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#prescription_TT_booster"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#arrhythmia"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#fever"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#headache"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#sweating"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#trouble_swallowing"/>
+        <hasVaccine rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TT_Booster"/>
+        <location rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#skeleton"/>
+        <hasDiseaseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tetanus</hasDiseaseName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#thigh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#thigh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thigh</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#thymus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#thymus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ChestOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thymus</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#thyroid_gland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#thyroid_gland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thyroid gland</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tiredness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tiredness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tiredness</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tongue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tongue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tongue</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#traumatology-orthopedy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#traumatology-orthopedy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#skeleton"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#plaster"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#surgery"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">traumatology-orthopedy</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#trouble_swallowing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#trouble_swallowing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trouble swallowing</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tylenol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#tylenol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_200_mg"/>
+        <treatmentDuration rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_week"/>
+        <treatmentFrequency rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_1_time_per_day"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#upper_arm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#upper_arm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#urology-nephrology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#urology-nephrology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#MedicalSpeciality"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#bladder"/>
+        <dealsWithOrgan rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#kidneys"/>
+        <hasSpecialityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urology-nephrology</hasSpecialityName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vaccines -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vaccines">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Vaccination"/>
+        <offerService rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vaccines"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vertebrae -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vertebrae">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#BackOrgan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Organ"/>
+        <hasOrganName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vertebrae</hasOrganName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vibramycin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vibramycin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#mass_200_mg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vicks_vaporub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vicks_vaporub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Medication"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Treatment"/>
+        <quantityPerTake rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#gram"/>
+        <treatmentDuration rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#duration_1_day"/>
+        <treatmentFrequency rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#frequency_2_times_per_day"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vomit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#vomit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vomit</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#watery_stools -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#watery_stools">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Symptom"/>
+        <takeRemedy rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ORS"/>
+        <hasSymptomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">watery stools</hasSymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#week -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#week">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#year -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#year">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#AbdominalOrgan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#BackOrgan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#ChestOrgan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#HeadAndNeckOrgan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#NonLocalizedOrgan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#PelvicOrgan"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Duration"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Frequency"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2020/6/disease#Mass"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
